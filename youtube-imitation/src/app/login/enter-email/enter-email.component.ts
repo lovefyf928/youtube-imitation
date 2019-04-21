@@ -22,6 +22,10 @@ export class EnterEmailComponent implements OnInit {
       }
     })
   }
+
+  create(){
+    this.r.navigate(["/register"]);
+  }
   ngOnInit() {
   }
 

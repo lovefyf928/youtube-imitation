@@ -10,13 +10,15 @@ import { EnterEmailComponent } from './login/enter-email/enter-email.component';
 import { EnterPwdComponent } from './login/enter-pwd/enter-pwd.component';
 
 import { Server } from "./server";
+import { RegisterComponent } from './login/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     EnterEmailComponent,
-    EnterPwdComponent
+    EnterPwdComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
