@@ -4,6 +4,7 @@ import {LoginComponent} from "./login/login.component";
 import {EnterEmailComponent} from "./login/enter-email/enter-email.component";
 import {EnterPwdComponent} from "./login/enter-pwd/enter-pwd.component";
 import {RegisterComponent} from "./login/register/register.component";
+import {YoutubeComponent} from "./youtube/youtube.component";
 
 const routes: Routes = [
   {path: "", component: LoginComponent, children: [
@@ -17,6 +18,9 @@ const routes: Routes = [
         path: "register", component: RegisterComponent
       }
     ]
+  },
+  {
+    path: "youtube", component: YoutubeComponent
   }
 ];
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import {Server} from "../../server";
 
 @Component({
@@ -11,7 +11,7 @@ export class EnterPwdComponent implements OnInit {
   userName: any;
   email: any;
   password = "";
-  constructor(private ar: ActivatedRoute, private s: Server) { }
+  constructor(private ar: ActivatedRoute, private s: Server, private r: Router) { }
 
   login() {
     if (this.password != "") {
@@ -20,6 +20,7 @@ export class EnterPwdComponent implements OnInit {
         if (res.Data != null) {
           alert(res.Data.msg);
           sessionStorage.setItem("token", res.Data.token);
+          this.r.navigate(["youtube"]);
         } else {
           alert("your password error");
         }

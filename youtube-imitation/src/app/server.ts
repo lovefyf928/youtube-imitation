@@ -9,8 +9,19 @@ export class Server {
   constructor(private hc: HttpClient) {
   }
 
+  returnToken() {
+    var token = sessionStorage.getItem("token");
+    if (token != null) {
+      return token;
+    }
+    else {
+      return "";
+    }
+  }
+
   header = new HttpHeaders({
-    'Content-Type': 'application/x-www-form-urlencoded'
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'authorization': this.returnToken()
   });
 
   SelectUserName(account) {
@@ -21,5 +32,10 @@ export class Server {
   Login(userName, password) {
     var body = new HttpParams().set("userName", userName).set("password", password);
     return this.hc.post(`${this.url}login`, body.toString(), {headers: this.header});
+  }
+
+  Register(userName, email, phoneNumber, password) {
+    var body = new HttpParams().set("userName", userName).set("email", email).set("phoneNumber", phoneNumber).set("password", password);
+    return this.hc.post(`${this.url}register`, body.toString(), {headers: this.header});
   }
 }

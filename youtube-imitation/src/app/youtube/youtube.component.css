@@ -1,0 +1,65 @@
+.header{
+  display: flex;
+  height: 3.5rem;
+  padding: 0 1rem;
+
+}
+.headerBtn1{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+.logoBox{
+  width: 8.0625rem;
+  height: 1.5rem;
+  margin-top: 1rem;
+}
+.logo{
+  width: 5rem;
+  height: 1.5rem;
+}
+.searchBox{
+  height: 2rem;
+  width: 124.625rem;
+  margin: 0 2.5rem;
+  margin-top: 0.75rem;
+}
+.searchInput{
+  position: relative;
+  width: 40rem;
+  height: 1.75rem;
+  border: 1px #cccccc solid;
+  margin: 0 auto;
+}
+.input{
+  position: absolute;
+  display: inline-block;
+  width: 35.1875rem;
+  height: 1.75rem;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.trueInput{
+  width: 34.875rem;
+  height: 1.625rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding-top: 1px;
+}
+.search{
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  width: 4rem;
+  height: 1.75rem;
+  border-left: 1px #cccccc solid;
+  background: #f8f8f8;
+}
+.iconSearch {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.265625rem auto;
+}
