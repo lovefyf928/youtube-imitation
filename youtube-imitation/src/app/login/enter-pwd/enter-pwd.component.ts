@@ -20,7 +20,7 @@ export class EnterPwdComponent implements OnInit {
         if (res.Data != null) {
           alert(res.Data.msg);
           sessionStorage.setItem("token", res.Data.token);
-          this.r.navigate(["youtube"]);
+          this.r.navigate(["youtube/setting/account"]);
         } else {
           alert("your password error");
         }
