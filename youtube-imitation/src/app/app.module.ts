@@ -12,6 +12,8 @@ import { EnterPwdComponent } from './login/enter-pwd/enter-pwd.component';
 import { Server } from "./server";
 import { RegisterComponent } from './login/register/register.component';
 import { YoutubeComponent } from './youtube/youtube.component';
+import { SettingComponent } from './youtube/setting/setting.component';
+import { AccountComponent } from './youtube/setting/account/account.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { YoutubeComponent } from './youtube/youtube.component';
     EnterEmailComponent,
     EnterPwdComponent,
     RegisterComponent,
-    YoutubeComponent
+    YoutubeComponent,
+    SettingComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

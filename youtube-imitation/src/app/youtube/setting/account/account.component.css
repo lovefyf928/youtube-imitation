@@ -1,0 +1,47 @@
+.header{
+  width: 55.3125rem;
+  height: 12.75rem;
+  padding: 1.5rem 0 0 1.5625rem;
+}
+.header2{
+  padding-top: 1.875rem;
+}
+.header3{
+  padding-top: 0.9375rem;
+}
+.content{
+  width: 100%;
+  margin: 10px 25px 30px;
+  padding: 0 0 10px;
+}
+.contentHeader{
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.channel{
+  position: relative;
+}
+.s1{
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  font-size: 13px;
+  width: 12.5rem;
+}
+.d1{
+  display: inline-block;
+  margin: 0 0 20px 200px;
+}
+.a1{
+  font-size: 13px;
+}
+.s2{
+  display: inline-block;
+  font-size: 13px;
+  width: 12.5rem;
+  float: left;
+}
+.clear{
+  clear: both;
+}
+
