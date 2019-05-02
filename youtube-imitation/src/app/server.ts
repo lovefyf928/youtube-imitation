@@ -38,4 +38,8 @@ export class Server {
     var body = new HttpParams().set("userName", userName).set("email", email).set("phoneNumber", phoneNumber).set("password", password);
     return this.hc.post(`${this.url}register`, body.toString(), {headers: this.header});
   }
+  sendToken() {
+    var body = new HttpParams();
+    return this.hc.post(`${this.url}testToken`, body.toString(), {headers: this.header});
+  }
 }
