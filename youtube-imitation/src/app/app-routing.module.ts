@@ -7,6 +7,8 @@ import {RegisterComponent} from "./login/register/register.component";
 import {YoutubeComponent} from "./youtube/youtube.component";
 import {SettingComponent} from "./youtube/setting/setting.component";
 import {AccountComponent} from "./youtube/setting/account/account.component";
+import {ChangeInformationComponent} from "./login/change-information/change-information.component";
+import {IndexComponent} from "./youtube/index/index.component";
 
 const routes: Routes = [
   {path: "", component: LoginComponent, children: [
@@ -18,6 +20,9 @@ const routes: Routes = [
       },
       {
         path: "register", component: RegisterComponent
+      },
+      {
+        path: "changei", component: ChangeInformationComponent
       }
     ]
   },
@@ -29,6 +34,9 @@ const routes: Routes = [
             path: "account", component: AccountComponent
           }
         ]
+      },
+      {
+        path: "index", component: IndexComponent
       }
     ]
   }

@@ -1,0 +1,44 @@
+<div>
+  <div id="title">
+    <h2 style="margin-bottom: 10px">修改您的 YouTube 个人信息</h2>
+  </div>
+  <div class="operating">
+    <div class="input">
+      <input [(ngModel)]="userName" class="trueinput" type="text" style="width: 366px; height: 34px; border-radius: 4px; border: none; outline: none; padding-left: 5px">
+      <div class="text">用户名</div>
+    </div>
+    <div class="input">
+      <input [(ngModel)]="newPassword" class="trueinput" type="text" style="width: 366px; height: 34px; border-radius: 4px; border: none; outline: none; padding-left: 5px">
+      <div class="text">新密码</div>
+    </div>
+    <div class="input">
+      <input [(ngModel)]="confirmPassword" class="trueinput" type="text" style="width: 366px; height: 34px; border-radius: 4px; border: none; outline: none; padding-left: 5px">
+      <div class="text">确认新密码</div>
+    </div>
+    <div class="add">
+      <span>性别：</span>
+      <span>男</span>
+      <input [(ngModel)]="sex" type="radio" name="sex" value="1">&nbsp;
+      <span>女</span>
+      <input [(ngModel)]="sex" type="radio" name="sex" value="0">
+    </div>
+    <div class="input">
+      <span>生日：</span>
+      <span>年:</span>
+      <select [(ngModel)]="SelectYear">
+        <option *ngFor="let item of YearArr">{{item}}</option>
+      </select>&nbsp;
+      <span>月:</span>
+      <select [(ngModel)]="SelectMonth" (change)="Day()">
+        <option *ngFor="let item of MonthArr">{{item}}</option>
+      </select>&nbsp;
+      <span>日:</span>
+      <select [(ngModel)]="SelectDay">
+        <option *ngFor="let item of DayArr">{{item}}</option>
+      </select>
+    </div>
+    <div id="end">
+      <button (click)="Submit()" id="next">下一步</button>
+    </div>
+  </div>
+</div>

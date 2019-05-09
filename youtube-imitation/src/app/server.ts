@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {Http} from "@angular/http";
 
 @Injectable()
 
@@ -41,5 +42,13 @@ export class Server {
   sendToken() {
     var body = new HttpParams();
     return this.hc.post(`${this.url}testToken`, body.toString(), {headers: this.header});
+  }
+  getInformation() {
+    var body = new HttpParams();
+    return this.hc.post(`${this.url}getinformation`, body.toString(), {headers: this.header});
+  }
+  changeInformation(userName, password, sex, year, month, day) {
+    var body = new HttpParams().set("userName", userName).set("newPassword", password).set("sex", sex).set("year", year).set("month", month).set("day", day);
+    return this.hc.post(`${this.url}changeinformation`, body.toString(), {headers: this.header})
   }
 }
