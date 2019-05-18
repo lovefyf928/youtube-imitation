@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Server } from "../../server";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-change-information',
@@ -23,7 +24,7 @@ export class ChangeInformationComponent implements OnInit {
   newPassword = "";
   confirmPassword = "";
 
-  constructor(private s: Server) { }
+  constructor(private s: Server, private  r: Router) { }
 
   getDay(m, y){
     if (m != 2) {
@@ -59,7 +60,7 @@ export class ChangeInformationComponent implements OnInit {
       if (this.newPassword == this.confirmPassword && this.newPassword.length >= 6) {
         this.s.changeInformation(this.userName, this.confirmPassword, this.sex, this.SelectYear, this.SelectMonth, this.SelectDay).subscribe((res) => {
           alert(res.Msg);
-          window.location.reload();
+          this.r.navigate(["setting/account"]);
         }, (err) => {
           console.log(err);
         });
@@ -71,7 +72,7 @@ export class ChangeInformationComponent implements OnInit {
     else {
       this.s.changeInformation(this.userName, this.confirmPassword, this.sex, this.SelectYear, this.SelectMonth, this.SelectDay).subscribe((res) => {
         alert(res.Msg);
-        window.location.reload();
+
       }, (err) => {
         console.log(err);
       });

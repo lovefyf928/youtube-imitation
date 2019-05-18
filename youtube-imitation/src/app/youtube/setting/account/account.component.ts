@@ -25,7 +25,7 @@ export class AccountComponent implements OnInit {
     }
     else {
       alert("plz login");
-      this.r.navigate([""])
+      this.r.navigate(["login"])
     }
   }
 

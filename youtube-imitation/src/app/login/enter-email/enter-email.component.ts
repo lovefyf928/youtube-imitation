@@ -15,7 +15,7 @@ export class EnterEmailComponent implements OnInit {
     this.s.SelectUserName(this.account).subscribe((res) => {
       console.log(res);
       if (res.Data != null) {
-        this.r.navigate(["/enterpwd"], {queryParams: {email: res.Data.email, userName: res.Data.userName}})
+        this.r.navigate(["login/enterpwd"], {queryParams: {email: res.Data.email, userName: res.Data.userName}})
       }
       else {
         alert(res.Msg);
@@ -24,7 +24,7 @@ export class EnterEmailComponent implements OnInit {
   }
 
   create(){
-    this.r.navigate(["/register"]);
+    this.r.navigate(["login/register"]);
   }
   ngOnInit() {
   }

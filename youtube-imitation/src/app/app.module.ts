@@ -16,6 +16,7 @@ import { SettingComponent } from './youtube/setting/setting.component';
 import { AccountComponent } from './youtube/setting/account/account.component';
 import { ChangeInformationComponent } from './login/change-information/change-information.component';
 import { IndexComponent } from './youtube/index/index.component';
+import { MainComponent } from './youtube/index/main/main.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { IndexComponent } from './youtube/index/index.component';
     SettingComponent,
     AccountComponent,
     ChangeInformationComponent,
-    IndexComponent
+    IndexComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

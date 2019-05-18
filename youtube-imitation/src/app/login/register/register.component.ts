@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   password = "";
   confirmPassword = "";
   jump(){
-    this.r.navigate([""]);
+    this.r.navigate(["login"]);
   }
   createAccount(){
     var phoneTest = new RegExp("^1[34578]\\d{9}$");
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
         this.s.Register(this.userName, this.email, this.phoneNumber, this.password).subscribe((res) => {
           alert(res.Msg);
           if (res.StatusCode == 200) {
-            this.r.navigate([""]);
+            this.r.navigate(["login"]);
           }
         })
       }
