@@ -57,7 +57,7 @@ export class ChangeInformationComponent implements OnInit {
 
   Submit(){
     if (this.newPassword != "") {
-      if (this.newPassword == this.confirmPassword && this.newPassword.length >= 6) {
+      if (this.newPassword == this.confirmPassword && this.newPassword.length >= 8) {
         this.s.changeInformation(this.userName, this.confirmPassword, this.sex, this.SelectYear, this.SelectMonth, this.SelectDay).subscribe((res) => {
           alert(res.Msg);
           this.r.navigate(["setting/account"]);

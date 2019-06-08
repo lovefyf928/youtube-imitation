@@ -1,0 +1,32 @@
+.content{
+  width: 62.6875rem;
+  height: 49.30062rem;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+  background: #ffffff;
+  position: relative;
+}
+.optArea{
+  width: 26.8125rem;
+  height: 25.875rem;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+.optArea *{
+  display: block;
+  margin-bottom: 1rem;
+}
+.title{
+  width: 26.5625rem;
+  height: 3rem;
+}
+.explain{
+  width: 26.5625rem;
+  height: 9.8125rem;
+}
+.btn{
+  width: 26.5625rem;
+  height: 3rem;
+}

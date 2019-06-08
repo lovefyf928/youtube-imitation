@@ -22,6 +22,7 @@ export class Server {
 
   header = new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded',
+    // 'Content-Type': 'multipart/form-data',
     'authorization': this.returnToken()
   });
 
@@ -50,5 +51,14 @@ export class Server {
   changeInformation(userName, password, sex, year, month, day) {
     var body = new HttpParams().set("userName", userName).set("newPassword", password).set("sex", sex).set("year", year).set("month", month).set("day", day);
     return this.hc.post(`${this.url}changeinformation`, body.toString(), {headers: this.header})
+  }
+  upLoadVideo(title, explain, label, file) {
+    let data = new FormData();
+    data.append("title", title);
+    data.append("explain", explain);
+    data.append("label", label);
+    data.append("video", file);
+    data.append("token", sessionStorage.getItem("token"));
+    return this.hc.post(`${this.url}uploadvideo`, data)
   }
 }

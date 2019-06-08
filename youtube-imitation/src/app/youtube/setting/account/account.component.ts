@@ -17,8 +17,8 @@ export class AccountComponent implements OnInit {
   ngOnInit() {
     if (sessionStorage.getItem("token") != null) {
       this.s.sendToken().subscribe((res) => {
-        this.uname = res.Data.userName;
-        this.email = res.Data.email;
+        this.uname = res.Data.UserName;
+        this.email = res.Data.Email;
       }, (err) => {
         console.log(err);
       })

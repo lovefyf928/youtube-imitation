@@ -10,6 +10,7 @@ import {AccountComponent} from "./youtube/setting/account/account.component";
 import {ChangeInformationComponent} from "./login/change-information/change-information.component";
 import {IndexComponent} from "./youtube/index/index.component";
 import {MainComponent} from "./youtube/index/main/main.component";
+import {UpLoadVideoComponent} from "./youtube/up-load-video/up-load-video.component";
 
 const routes: Routes = [
   {path: "login", component: LoginComponent, children: [
@@ -42,6 +43,9 @@ const routes: Routes = [
             path: "", component: MainComponent
           }
         ]
+      },
+      {
+        path: "uploadvideo", component: UpLoadVideoComponent
       }
     ]
   }

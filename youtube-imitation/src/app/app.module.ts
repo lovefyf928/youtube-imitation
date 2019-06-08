@@ -17,6 +17,7 @@ import { AccountComponent } from './youtube/setting/account/account.component';
 import { ChangeInformationComponent } from './login/change-information/change-information.component';
 import { IndexComponent } from './youtube/index/index.component';
 import { MainComponent } from './youtube/index/main/main.component';
+import { UpLoadVideoComponent } from './youtube/up-load-video/up-load-video.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MainComponent } from './youtube/index/main/main.component';
     AccountComponent,
     ChangeInformationComponent,
     IndexComponent,
-    MainComponent
+    MainComponent,
+    UpLoadVideoComponent
   ],
   imports: [
     BrowserModule,

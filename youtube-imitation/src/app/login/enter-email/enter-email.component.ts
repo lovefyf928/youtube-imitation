@@ -15,7 +15,7 @@ export class EnterEmailComponent implements OnInit {
     this.s.SelectUserName(this.account).subscribe((res) => {
       console.log(res);
       if (res.Data != null) {
-        this.r.navigate(["login/enterpwd"], {queryParams: {email: res.Data.email, userName: res.Data.userName}})
+        this.r.navigate(["login/enterpwd"], {queryParams: {email: res.Data.Email, userName: res.Data.UserName}})
       }
       else {
         alert(res.Msg);

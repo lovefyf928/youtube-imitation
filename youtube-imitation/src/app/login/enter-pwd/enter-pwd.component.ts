@@ -18,8 +18,8 @@ export class EnterPwdComponent implements OnInit {
       this.s.Login(this.userName, this.password).subscribe((res) => {
         console.log(res);
         if (res.Data != null) {
-          alert(res.Data.msg);
-          sessionStorage.setItem("token", res.Data.token);
+          alert(res.Msg);
+          sessionStorage.setItem("token", res.Data.Token);
           this.r.navigate(["setting/account"]);
         } else {
           alert("your password error");
