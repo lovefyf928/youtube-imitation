@@ -2,6 +2,7 @@
   <div class="content">
     <div class="optArea">
       <input (change)="getFile($event)" type="file">
+      <span>选择视频展示图</span><input (change)="getFile2($event)" type="file">
       <input [(ngModel)]="title" class="title" type="text" placeholder="标题">
       <textarea [(ngModel)]="explain" class="explain" type="text" placeholder="说明"></textarea>
       <input [(ngModel)]="label" class="title" type="text" placeholder="标签">

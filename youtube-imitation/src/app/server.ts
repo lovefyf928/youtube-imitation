@@ -52,8 +52,9 @@ export class Server {
     var body = new HttpParams().set("userName", userName).set("newPassword", password).set("sex", sex).set("year", year).set("month", month).set("day", day);
     return this.hc.post(`${this.url}changeinformation`, body.toString(), {headers: this.header})
   }
-  upLoadVideo(title, explain, label, file) {
+  upLoadVideo(title, explain, label, file, file2) {
     let data = new FormData();
+    data.append("videoImg", file2);
     data.append("title", title);
     data.append("explain", explain);
     data.append("label", label);
